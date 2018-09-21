@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "version": "",
+  "dependencies": {
+    "koa": "^2.5.3",
+    "koa-cors": "0.0.16",
+    "koa-router": "^7.4.0",
+    "mysql2": "^1.6.1",
+    "redis": "^2.8.0"
+  }
+}
