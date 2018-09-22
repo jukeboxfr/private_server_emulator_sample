@@ -1,6 +1,6 @@
 "use strict";
 const 	Sequelize = require("sequelize");
-const 	{ database } = require("../config/config");
+const 	{ database } = require("../config/config.js");
 
 const 	sequelize = new Sequelize(database.name, database.user, database.password, {
   host: database.host,

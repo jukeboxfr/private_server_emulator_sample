@@ -1,15 +1,15 @@
 "use strict";
 const 	Koa  = require("koa");
 const 	cors = require("koa-cors");
-const 	fs   = require("fs");
-const   config = require("./config.js");
-const 	loginRouter = require("./routes/login");
 
-process.env.NODE_ENV = ();
+const 	{ server } = require("./config/config");
+const 	router = require("./routes");
+
 
 const app = new Koa();
 
+app.use(json({ pretty: false, param: 'pretty' }));
 app.use(cors());
 
-app.use(loginRouter.routes());
+app.use(router.routes());
 app.listen(server.port);
