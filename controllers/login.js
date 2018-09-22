@@ -1,17 +1,16 @@
 "use strict";
-const { generateRandomKey, generateRandomToken } = require("../utils/random.js");
+const 	{ createApiKey, createToken } = require("../cache");
 
-
-const 	createApiKey = async ctx => {
+const 	getApiKey = async ctx => {
 	ctx.body = "Create API Key";
 };
 
-const 	createToken = async ctx => {
+const 	getToken = async ctx => {
 	ctx.body = "Create Token";
 };
 
 
 module.exports = {
-	createApiKey,
-	createToken
+	getApiKey,
+	getToken
 };

@@ -1,9 +1,9 @@
 "use strict";
 const 	Sequelize = require("sequelize");
-const 	{ database } = require("../config/config");
+const 	{ mysql } = require("../confs/settings");
 
-const 	sequelize = new Sequelize(database.name, database.user, database.password, {
-  host: database.host,
+const 	sequelize = new Sequelize(mysql.name, mysql.user, mysql.password, {
+  host: mysql.host,
   dialect: "mysql",
   pool: {
     max: 5,

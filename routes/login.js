@@ -1,10 +1,11 @@
+"use strict";
 const Router = require("koa-router");
-const { createApiKey,
-		createToken } = require("../controllers/login.js");
+const { getApiKey,
+		getToken } = require("../controllers/login.js");
 
 const route = new Router();
 
-route.post("/CreateApiKey", createApiKey);
-route.get("/CreateToken", createToken);
+route.post("/CreateApiKey", getApiKey);
+route.get("/CreateToken", getToken);
 
 module.exports = route;

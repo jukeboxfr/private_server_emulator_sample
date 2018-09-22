@@ -1,10 +1,11 @@
 "use strict";
 const 	Koa  = require("koa");
 const 	cors = require("koa-cors");
+const 	json = require("koa-json");
 
-const 	{ server } = require("./config/config");
+const { server } = require("./confs/settings");
+
 const 	router = require("./routes");
-
 
 const app = new Koa();
 
