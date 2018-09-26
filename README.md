@@ -1,1 +1,1 @@
-# Ignis API
+# Ignis

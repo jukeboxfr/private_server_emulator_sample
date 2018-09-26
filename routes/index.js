@@ -1,10 +1,9 @@
-const 	Router 		= require("koa-router");
-
-const 	jsonRouter  = require("./json");
-const 	loginRouter = require("./login");
+"use strict";
+import Router from "koa-router";
+import Api from "./api";
 
 const	route 		= new Router();
-route.use("/json", jsonRouter.routes());
-route.use("/login", loginRouter.routes());
 
-module.exports = route;
+route.use("/api", Api.routes());
+
+export default route;

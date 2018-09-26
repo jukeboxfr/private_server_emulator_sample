@@ -1,9 +1,9 @@
 "use strict";
-const 	Sequelize = require("sequelize");
-const 	{ mysql } = require("../confs/settings");
+import Sequelize from "sequelize";
+import settings  from "../settings.json";
 
-const 	sequelize = new Sequelize(mysql.name, mysql.user, mysql.password, {
-  host: mysql.host,
+const 	sequelize = new Sequelize(settings.mysql.name, settings.mysql.user, settings.mysql.password, {
+  host: settings.mysql.host,
   dialect: "mysql",
   pool: {
     max: 5,
@@ -14,4 +14,4 @@ const 	sequelize = new Sequelize(mysql.name, mysql.user, mysql.password, {
   operatorsAliases: false
 });
 
-module.exports = sequelize;
+export default sequelize;
